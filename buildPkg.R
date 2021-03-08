@@ -47,15 +47,16 @@ build(manual = TRUE, vignettes = FALSE)
 # build_win() # not used here. see below
 
 ##----------------------------------------------------------------------
+## Generate README.md
+knit(input = "README.Rmd")
+
+##----------------------------------------------------------------------
 ## Test installation.
 
 ## Test install with install.packages()
 pkg <- paste0("../tcctemplate_", packageVersion("tcctemplate"), ".tar.gz")
 install.packages(pkg, repos = NULL)
 
-##----------------------------------------------------------------------
-## Generate README.md
-knit(input = "README.Rmd")
 
 ##----------------------------------------------------------------------
 ## Sending package tarballs and manual to remote server to be
