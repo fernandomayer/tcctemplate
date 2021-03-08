@@ -1,0 +1,21 @@
+Package: tcctemplate
+Type: Package
+Title: Rmarkdown Theme for DEST TCC documents
+Version: 0.0.1
+Authors@R: c(
+  person("Fernando", "Mayer", email = "fernando.mayer@ufpr.br", role = c("aut", "cre")),
+  person("James", "Balamuta", role = c("aut"))
+  )
+Description: A set of custom Rmarkdown templates for documents and
+   presentations.
+URL: https://github.com/fernandomayer/tcctemplate
+BugReports: https://github.com/fernandomayer/tcctemplate/issues
+Depends:
+    R (>= 4.0)
+License: MIT + file LICENSE
+Imports:
+    rmarkdown (>= 1.1.0),
+    bookdown (>= 0.17)
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
+Encoding: UTF-8

@@ -1,0 +1,6 @@
+name: >
+ "LEG" Generic Project Template
+description: >
+ Template for creating generic projects using RMarkdown based on the "LEG"
+ Beamer LaTeX template.
+create_dir: true

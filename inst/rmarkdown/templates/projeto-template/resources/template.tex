@@ -1,0 +1,194 @@
+\documentclass[
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	oneside,			% para impressão apenas em um lado do papel
+	a4paper,			% tamanho do papel.
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---
+% Pacotes básicos
+% ---
+
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{lastpage}			% Usado pela Ficha catalográfica
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\setlength{\parindent}{1.5cm}   % Espaçamento de 1,5cm do parágrafo
+\usepackage{color}				% Controle das cores
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{lipsum}				% para geração de dummy text
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage[table,xcdraw]{xcolor}% Cédula colorida em tabelas
+\usepackage{pdflscape}          % Rotaciona página
+% \usepackage{Capa}               % Capa e folha de rosto com as modificações da Suely
+
+\usepackage{amsmath, amssymb, amsthm}
+
+% -----------------------------------------------------------------------
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \ABNTEXchapterfont\Large \imprimirinstituicao \\
+    \vspace*{1cm}
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vfill
+    \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+    \vfill
+    \large\imprimirlocal
+    \par
+    \large\imprimirdata
+    \vspace*{1cm}
+  \end{capa}
+}
+
+
+\makeatletter
+\renewcommand{\folhaderostocontent}{
+  \begin{center}
+    {\ABNTEXchapterfont\large\imprimirautor}
+    \vspace*{\fill}\vspace*{\fill}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+    \end{center}
+    \vspace*{\fill}
+    \abntex@ifnotempty{\imprimirpreambulo}{%
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+        \SingleSpacing
+        \imprimirpreambulo \hfill
+      \end{minipage}%
+      \vspace{0.5cm}
+
+      \hspace{.45\textwidth}
+      \begin{minipage}{.5\textwidth}
+        \imprimirorientadorRotulo~\imprimirorientador \hfill
+      \end{minipage}%
+      \vspace*{\fill}
+    }%
+    \vfill
+    {\large\imprimirlocal}
+    \par
+    {\large\imprimirdata}
+    \vspace*{1cm}
+  \end{center}
+}
+\makeatother
+%-----------------------------------------------------------------------
+
+$if(highlighting-macros)$
+$highlighting-macros$
+$endif$
+
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{CSLReferences}%
+{$if(csl-hanging-indent)$\setlength{\parindent}{0pt}%
+  \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces$endif$}%
+{\par}
+$endif$
+
+% ---
+% Dados dos documento
+% ---
+
+\titulo{$if(title)$$title$$endif$}
+% \autor{Nome Aluno 1 \\ Nome Aluno 2}
+\autor{$if(author1)$$author1$$endif$ \\ $if(author2)$$author2$$endif$}
+\data{$if(year)$$year$$endif$}
+\instituicao{Universidade Federal do Paraná
+             \par
+             Setor de Ciências Exatas
+             \par
+             Departamento de Estatística
+%             \par
+%             Curso de Estatística
+            }
+\local{Curitiba}
+\orientador[Orientador(a):]{$if(advisor)$$advisor$$endif$}
+\preambulo{Projeto de Pesquisa apresentado à disciplina Laboratório A do Curso de Graduação em Estatística da
+           Universidade Federal do Paraná, como requisito para elaboração do Trabalho de Conclusão de Curso.}
+
+% ---
+% Configurações básicas
+% ---
+
+% informações do PDF
+
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=black,            % color of links to bibliography
+    	filecolor=magenta,      	% color of file links
+		urlcolor=black,
+		bookmarksdepth=4
+}
+\makeatother
+
+\setlength\afterchapskip{\lineskip}
+
+% ----
+% Início do documento
+% ----
+
+\begin{document}
+\frenchspacing     % Retira espaço extra obsoleto entre as frases.
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+% ---
+% Capa
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Folha de rosto
+% ---
+\imprimirfolhaderosto
+% ---
+
+% ---
+% inserir o sumario
+% ---
+\tableofcontents*
+\cleardoublepage
+% ---
+
+\makepagestyle{abntheadings}
+\makeevenhead{abntheadings}{\ABNTEXfontereduzida\thepage}{}{}
+\makeoddhead{abntheadings}{}{}{\ABNTEXfontereduzida\thepage}
+\makeheadrule{abntheadings}{\textwidth}{0in}
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+$body$
+
+% ----------------------------------------------------------
+% Referências bibliográficas
+% ----------------------------------------------------------
+
+% \setlength{\afterchapskip}{\baselineskip}
+% \bibliography{$if(bibliography)$$bibliography$$endif$}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+% \postextual
+% ----------------------------------------------------------
+
+
+\end{document}

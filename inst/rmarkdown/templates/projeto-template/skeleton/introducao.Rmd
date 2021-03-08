@@ -1,0 +1,45 @@
+Digite a introdução do projeto.
+
+Para citar referências, basta usar a sintaxe `\cite{key}` para citação
+indireta, ou `\citeonline{key}` para citação direta, onde `key` é a
+chave para a referência.
+
+Por exemplo, podemos citar no texto, segundo \citeonline{kaplan}. No
+entanto, podemos deixar para fazer a citação no final da frase
+\cite{Casella-Berger2011}.
+
+Algumas outras referências são \citeonline{Wilks1962} e
+\citeonline{Mood1974}.
+
+O principal resultado do projeto é obter um gráfico tão impressionante
+quanto aquele que está representado na Figura \@ref(fig:disp). Note que,
+para figuras, o label do chunk vira a referência. Aqui esse label é
+`disp`, portanto, a referência para a figura fica `fig:disp`, e usamos
+`\@ref(fig:disp)`. Outra coisa importante é que, para isso funcionar, é
+necessário obrigatoriamente especificar uma legenda nas próprias opções
+do chunk, com a opção `fig.cap`.
+
+```{r disp, fig.cap='Uma legenda para esse gráfico.',fig.pos="!h"}
+plot(Petal.Length ~ Petal.Width, data = iris)
+```
+
+Uma figura externa também pode ser incluída. Nesse caso, a melhor opção
+é usar a função `include_graphics()` do **knitr**, e controlar a
+aparência com as opções do chunk. Veja um exemplo na Figura
+\@ref(fig:leg).
+
+```{r leg, fig.cap="O logo do LEG.", out.width="10%"}
+knitr::include_graphics("logo/leg.pdf")
+```
+
+Também é possível incluir códigos, se for necessário. Veja no próximo
+parágrafo como isso funciona.
+
+Uma descrição da base de dados `iris` pode ser obtida com a função
+`summary()`, que faz um resumo estatístico todas as variáveis presentes
+em um objeto da classe `data.frame`. Veja o resultado da chamada dessa
+função abaixo.
+
+```{r, echo=TRUE}
+summary(iris)
+```

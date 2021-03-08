@@ -1,0 +1,22 @@
+% \begin{landscape}    % página na orientação paisagem
+
+\begin{table}[h]
+\begin{tabular}{lllllll}
+\hline
+ & \textbf{ATIVIDADES} & \textbf{02/2016} & \textbf{03/2016} & \textbf{04/2016} & \textbf{05/2016} & \textbf{06/2016} \\ \hline
+\textbf{1} & \textbf{Projeto de Pesquisa} &  &  &  &  &  \\
+ & Entrega da versão final do Projeto de Pesquisa ao orientador & \cellcolor[HTML]{C0C0C0}{\color[HTML]{C0C0C0} } &  &  &  &  \\
+\textbf{2} & \textbf{Elaboração do Trabalho de Conclusão de Curso} &  &  &  &  &  \\
+ & Revisão de literatura sobre o tema & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} &  &  &  \\
+ & Análise dos dados e discussão dos resultados obtidos &  & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} &  \\
+ & Redação do trabalho de conclusão de curso &  &  & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} &  \\
+ & Leitura do trabalho pelo orientador e correções &  &  &  & \cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} \\
+ & Entrega do trabalho redigido aos membros da banca &  &  &  &  & \cellcolor[HTML]{C0C0C0} \\
+\textbf{3} & \textbf{Defesa do Trabalho de Conclusão de Curso} &  &  &  &  &  \\
+ & Preparação e apresentação do trabalho de conclusão de curso &  &  &  &  & \cellcolor[HTML]{C0C0C0} \\
+\textbf{4} & \textbf{Elaboração da Versão Final do Trabalho de Conclusão de Curso} &  &  &  &  &  \\
+ & Elaboração da versão final do TCC &  &  &  &  & \cellcolor[HTML]{C0C0C0} \\
+ & Entrega da versão final do trabalho ao orientador &  &  &  &  & \cellcolor[HTML]{C0C0C0} \\ \hline
+\end{tabular}
+\end{table}
+\end{landscape}
