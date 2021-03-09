@@ -20,15 +20,15 @@ To create a draft for use:
 
 ```r
 library(rmarkdown)
-draft(file = "projeto.Rmd", template = "projeto_template",
-      package = "tcctemplate", create_dir = FALSE, edit = FALSE)
+draft(file = "Projeto.Rmd", template = "projeto-template",
+      package = "tcctemplate", create_dir = TRUE, edit = FALSE)
 ```
-This will create (in the current directory) a file named `proj.Rmd`
-which can be further rendered with
+This will create a directory named `Projeto` with all files needed. Open
+`Projeto.Rmd` and render it with
 
 
 ```r
-render("proj.Rmd")
+render("Projeto.Rmd")
 ```
 
 <!-- Similarly, to create a draft document for the `proj_generico` theme, -->
@@ -43,6 +43,7 @@ The easiest way to install is directly from this repository with the
 
 
 ```r
+## install.packages("remotes")
 remotes::install_github("fernandomayer/tcctemplate")
 ```
 

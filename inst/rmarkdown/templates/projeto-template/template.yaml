@@ -1,6 +1,5 @@
 name: >
- "LEG" Generic Project Template
+ DEST UFPR Project Template
 description: >
- Template for creating generic projects using RMarkdown based on the "LEG"
- Beamer LaTeX template.
+ Template for creating projects using RMarkdown.
 create_dir: true

@@ -4,8 +4,8 @@
 
 ##----------------------------------------------------------------------
 ## Set working directory
-if (!basename(getwd()) == "tcc-template") {
-    stop("The working directory isn't /tcc-template")
+if (!basename(getwd()) == "tcctemplate") {
+    stop("The working directory isn't /tcctemplate")
 }
 
 ##----------------------------------------------------------------------
