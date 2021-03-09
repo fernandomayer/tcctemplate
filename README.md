@@ -15,7 +15,16 @@ DEST UFPR template for documents.
 <!-- - `proj_generico` is a theme for a generic project or any other similar -->
 <!--   document in PDF -->
 
-To create a draft for use:
+### In RStudio
+
+1. In the menu go to `File > New File > R Markdown...`
+2. In the opening window, choose `From Template`, then select
+`DEST UFPR Project Template {tcctemplate}`
+3. Give a name and choose a location then clicl `Ok`
+
+### Outside RStudio
+
+To create a draft use:
 
 
 ```r
