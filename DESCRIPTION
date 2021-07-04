@@ -1,11 +1,9 @@
 Package: tcctemplate
 Type: Package
 Title: Rmarkdown Theme for DEST TCC documents
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(
-  person("Fernando", "Mayer", email = "fernando.mayer@ufpr.br", role = c("aut", "cre")),
-  person("James", "Balamuta", role = c("aut"))
-  )
+  person("Fernando", "Mayer", email = "fernando.mayer@ufpr.br", role = c("aut", "cre"))
 Description: A set of custom Rmarkdown templates for documents and
    presentations.
 URL: https://github.com/fernandomayer/tcctemplate
