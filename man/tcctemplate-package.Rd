@@ -23,9 +23,4 @@ Useful links:
 \author{
 \strong{Maintainer}: Fernando Mayer \email{fernando.mayer@ufpr.br}
 
-Authors:
-\itemize{
-  \item James Balamuta
-}
-
 }
