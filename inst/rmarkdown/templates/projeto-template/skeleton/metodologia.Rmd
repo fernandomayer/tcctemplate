@@ -38,7 +38,7 @@ no final do parágrafo \cite{OHara2009}.
 ## Métodos
 
 Descrever os métodos que pretende utilizar. Tente ser objetivo, focando
-no método espec;ifico que irá utilizar. Uma descrição geral do método
+no método específico que irá utilizar. Uma descrição geral do método
 deve ser incluida na introdução, como revisão de literatura.
 
 Equações matemáticas funcionam normalmente com a sintaxe do \LaTeX{},
