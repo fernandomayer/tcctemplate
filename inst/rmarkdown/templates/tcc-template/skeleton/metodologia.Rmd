@@ -1,0 +1,66 @@
+## Material
+
+Descrever os dados e softwares a serem utilizados para a análise dos
+dados.
+
+Os dados podem ser apresentados em uma tabela, que pode ser
+referenciada. Por exemplo, veja a Tabela \@ref(tab:dados).
+
+
+```{r, results='asis'}
+da <- head(iris)
+xtable(da, caption =
+               "Uma legenda para essa tabela com \\textbf{xtable}.",
+       label = "tab:dados")
+```
+
+Note que a tabela acima foi gerada usando o pacote **xtable**
+\cite{xtable}, que funciona bem para \LaTeX{}, mas pode não ser portável
+caso queira utilizar o mesmo texto em uma página HTML, por exemplo. Por
+isso, a mesma tabela pode também ser gerada pela função
+`knitr::kable()`. Note que agora, o *label* de referência é o próprio
+nome do chunk, com o prefixo `tab:`, veja Tabela \@ref(tab:dados2). Para
+mais opções de tabelas, consulte o pacote **kableExtra** \cite{kableExtra}.
+
+```{r dados2, results='asis'}
+knitr::kable(da, caption =
+                     "Uma legenda para essa tabela com \\textbf{kable}.")
+```
+
+Evite dizer que uma tabela está "abaixo" ou "acima". Aqui, por exemplo,
+a tabela está abaixo do parágrafo, mas no documento compilado ela
+aparece depois de outro parágrafo.
+
+Esse é mais um texto só para empurrar a próxima sessão para baixo.
+Aproveito para citar mais um artigo de \citeonline{Bonat2018}, e outro
+no final do parágrafo \cite{OHara2009}.
+
+## Métodos
+
+Descrever os métodos que pretende utilizar. Tente ser objetivo, focando
+no método específico que irá utilizar. Uma descrição geral do método
+deve ser incluida na introdução, como revisão de literatura.
+
+Equações matemáticas funcionam normalmente com a sintaxe do \LaTeX{},
+como por exemplo
+
+\begin{equation*}
+P(X = x) = \frac{e^{-\lambda} \lambda^x}{x!},
+  \quad x = 0, 1, 2, \ldots .
+\end{equation*}
+
+As equações também podem ser referenciadas no texto, bastando adicionar
+um label no formato `(\#eq:binom)`, como por exemplo
+
+\begin{equation}
+f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}.
+(\#eq:binom)
+\end{equation}
+
+Para referenciar a equação \@ref(eq:binom), use `\@ref(eq:binom)`.
+
+Existem várias opções de ambientes, inclusive para definições, teoremas
+e provas. Veja a página do Bookdown[^1].
+
+
+[^1]: https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#equations

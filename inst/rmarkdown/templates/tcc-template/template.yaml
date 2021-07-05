@@ -1,0 +1,5 @@
+name: >
+ DEST UFPR TCC Template
+description: >
+ Template for creating projects using RMarkdown.
+create_dir: true

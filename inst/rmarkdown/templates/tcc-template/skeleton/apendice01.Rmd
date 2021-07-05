@@ -1,0 +1,10 @@
+\begin{apendicesenv}
+\partapendices
+\chapter*{\normalsize APÊNDICE A - Digite o cabeçalho do apêndice}
+\bigskip
+
+Inclua aqui texto ou documento elaborado pelo autor, a fim de
+complementar sua argumentação, sem prejuízo da unidade nuclear do
+trabalho.
+
+\end{apendicesenv}
