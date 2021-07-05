@@ -57,18 +57,17 @@ knit(input = "README.Rmd")
 pkg <- paste0("../tcctemplate_", packageVersion("tcctemplate"), ".tar.gz")
 install.packages(pkg, repos = NULL)
 
-
 ##----------------------------------------------------------------------
 ## Sending package tarballs and manual to remote server to be
 ## downloadable
 
 ## Create Windows version
-pkg.win <- paste0("../legtheme_", packageVersion("legtheme"), ".zip")
-cmd.win <- paste("cd ../legtheme.Rcheck && zip -r", pkg.win, "legtheme")
+pkg.win <- paste0("../tcctemplate_", packageVersion("tcctemplate"), ".zip")
+cmd.win <- paste("cd ../tcctemplate.Rcheck && zip -r", pkg.win, "tcctemplate")
 system(cmd.win)
 
 ## Link to manual
-man <- "../legtheme.Rcheck/legtheme-manual.pdf"
+man <- "../tcctemplate.Rcheck/tcctemplate-manual.pdf"
 
 ## Send to downloads/ folder
 dest <- "downloads/"
