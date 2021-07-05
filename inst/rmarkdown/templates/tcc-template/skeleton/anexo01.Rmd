@@ -1,0 +1,11 @@
+\begin{anexosenv}
+\partanexos
+%\addcontentsline{toc}{chapter}{\hspace{2.105cm}ANEXOS}
+\renewcommand{\ABNTEXchapterfontsize}{\ABNTEXsectionfont}
+\chapter*{\normalsize ANEXO A - Digite o cabeçalho do anexo}
+\bigskip
+
+Inclua aqui texto ou documento não elaborado pelo autor, que serve de
+fundamentação, comprovação e ilustração
+
+\end{anexosenv}
